@@ -1,0 +1,80 @@
+Proyecto Login
+
+Stack
+------
+-Node.js
+-Express
+-Mongo DB
+-Passport
+
+-ejecutamos el comando para instalar información básica de nuestro proyecto
+$> npm init --yes
+
+- Primero instalamos Mongo DB...
+-Instalamos los siguientes modulos
+
+(Libreria para conectar por puerto 80 Nodejs)
+$> npm i express 
+
+(Librería me permite conectacme a la bd mongo DB, Base de datos No Relacional)
+$> npm i mongoose
+
+Motor de plantilla, libreria que me permite escribir sintax
+$> npm i ejs-mate
+
+Modulo, nos permite enviar mensajes entre páginas y plantillas o vistas
+$> npm i connect-flash
+
+Modulo para ver en consola que es lo que el usuario está pidiendo, para ver por http que es lo que la app cliente nos piden
+$> npm i morgan
+
+Libreria para poder hacer la autenticación de manera local, autenticación con oauth o cualquier servicio de tercero
+$> npm i passport
+
+de manera local
+$> npm i passport-local
+
+Modulo para encriptar la contraseña
+$> npm i bcrypt-nodejs
+
+
+------ Instalar todo juntos--------
+$> npm i express mongoose ejs-mate connect-flash morgan passport passport-local bcrypt-nodejs
+
+Nodemon, controlará cualquier cambio en su fuente y reiniciará automáticamente su servidor
+$> npm i nodemon -D
+
+
+-"scripts": {
+    "dev":"nodemon src/index.js"
+  },
+
+Servidor preparado para guardar cambios
+*levantar Servidor
+$> npm run dev
+
+-Iniciamos mongo DB
+$> sudo service mongod start
+$> mongo
+
+-Instalamos el modulo para almacenar datos en session en express 
+$> npm i express-session
+
+Mongo DB
+---------
+
+$> sudo service mongod start
+$> mongo
+
+-usar una bd
+$> use <nombre bd>
+
+-mostrar usr
+$> show collections
+
+- Mostrar los registro de una table
+$> db.users.find()
+$> db.users.find().pretty()
+
+-Borrar registro de la BD
+$> db.users.drop()
